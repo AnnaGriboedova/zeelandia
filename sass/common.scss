@@ -1,0 +1,132 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "components/header";
+@import "components/advantagesBlock";
+@import "components/advantagesNavBlock";
+@import "components/advantagesBlockSlider";
+@import "components/ourStoryBlock";
+@import "components/partnershipBlock";
+@import "components/recipesBlock";
+@import "components/academyBlock";
+@import "components/loginBlock";
+@import "components/contactsBlock";
+@import "components/footer";
+
+@import "variables";
+
+@font-face {
+  font-family: 'poppinsRegular';
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+  //src: url('../fonts/poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+  //url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+  //url('../fonts/poppins/Poppins-Regular.woff') format('woff'),
+  //url('../fonts/poppins/Poppins-Regular.ttf') format('truetype'),
+ // url('../fonts/poppins/Poppins-Regular.svg#big_johnregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinsLight';
+  src: url('../fonts/poppins/Poppins-Light.ttf');
+  //src: url('../fonts/poppins/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+  //url('../fonts/poppins/Poppins-Light.woff2') format('woff2'),
+  //url('../fonts/poppins/Poppins-Light.woff') format('woff'),
+  //url('../fonts/poppins/Poppins-Light.ttf') format('truetype'),
+  // url('../fonts/poppins/Poppins-Light.svg#big_johnregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinsSemiBold';
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+  //src: url('../fonts/poppins/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+  //url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+  //url('../fonts/poppins/Poppins-SemiBold.woff') format('woff'),
+  //url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype'),
+  // url('../fonts/poppins/Poppins-SemiBold.svg#big_johnregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppinsMedium';
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
+  //src: url('../fonts/poppins/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+  //url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
+  //url('../fonts/poppins/Poppins-Medium.woff') format('woff'),
+  //url('../fonts/poppins/Poppins-Medium.ttf') format('truetype'),
+  // url('../fonts/poppins/Poppins-Medium.svg#big_johnregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.globalBody{
+  position: relative;
+  padding-bottom: $footerHeight;
+}
+.contentContainer{
+  width: 1140px;
+  margin: auto;
+}
+@media (max-width: 1180px) {
+  .contentContainer{
+    width: 100%;
+    padding: 0 11px;
+  }
+}
+.purpleButton{
+  display: inline-block;
+  width: 240px;
+  height: 55px;
+  text-align: center;
+  border-radius: 55px;
+  background: $mainMediumPurpleColor;
+  color: white;
+  font-size: 11px;
+  font-family: poppinsSemiBold, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  &:after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .purpleButtonTitle{
+     vertical-align: middle;
+    color: white;
+  }
+  .purpleButtonTitle:after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url("../img/icons/arrowToRight.png") no-repeat center;
+    background-size: 10px;
+    vertical-align: middle;
+    margin-left: 25px;
+  }
+}
+.blockTopic, .blockHeading{
+  color: $mainDarkPurpleColor;
+}
+.blockTopic{
+  font-size: 11px;
+  font-family: poppinsSemiBold, sans-serif;
+  text-transform: uppercase;
+}
+.blockHeading{
+  font-size: 34px;
+  font-family: poppinsMedium, sans-serif;
+  line-height: 1.25;
+}
+.blockText{
+  font-family: poppinsLight, sans-serif;
+  font-size: 14px;
+  color: $mainMediumGreyColor;
+  line-height: 1.6;
+}

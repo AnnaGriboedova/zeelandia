@@ -1,0 +1,32 @@
+@import "../variables";
+
+.contactsBlockWrapper{
+  padding: 160px 0 0;
+  background: url("../img/contactsBlockBg.png") no-repeat center, #fbf9fb;
+  .contactsBlock{
+    padding: 0 0 50px;
+    text-align: center;
+    .contactsBlock__topic{
+      color: $mainBrightPurpleColor;
+    }
+    .contactsBlock__heading{
+      margin: 20px 0 0;
+    }
+    .contactsBlock__text{
+      color: $lightPurpleColor;
+      margin: 35px 0 0;
+    }
+    .contactsBlock__contactsButton{
+      margin: 60px 0 0;
+      width: 230px;
+      .contactsBlock__contactsButtonTitle{
+        &:after{
+          width: 17px;
+          height: 17px;
+          background: url(../img/icons/contactsBtnIc.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}

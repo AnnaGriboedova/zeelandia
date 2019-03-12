@@ -1,0 +1,202 @@
+@import "../variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+.footer{
+  position: absolute;
+  bottom: 0;
+  height: $footerHeight;
+  width: 100%;
+  padding: 90px 0 0 0;
+  .footer__navBar{
+    padding-bottom: 35px;
+    height: 365px;
+    display: inline-block;
+    border-bottom: 1px solid $lightGrayVioletColor;
+    .footer__navBarColumn{
+      width: 25%;
+      height: 100%;
+      padding-right: 30px;
+      display: inline-block;
+      float: left;
+      .footer__navCategoryWrapper{
+        min-height: 155px;
+        margin: 0 0 40px;
+        &:last-child{
+          margin: 0;
+        }
+        .footer__navCategoryHeading{
+          font-size: 14px;
+        }
+        .footer__navCategoryList{
+          margin: 25px 0 0;
+          .footer__navCategoryLink{
+            font-size: 13px;
+            font-family: poppinsRegular,sans-serif;
+            display: inline-block;
+            width: 100%;
+            color: $mainDarkPurpleColor;
+            line-height: 2.2;
+          }
+        }
+        .footer__navCategoryText{
+          font-size: 13px;
+          margin: 20px 0 0;
+        }
+        .footer__numberWrapper{
+          &:after{
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            height: 100%;
+          }
+          .footer__numberIc{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+          .footer__number{
+            display: inline-block;
+            font-family: poppinsMedium,sans-serif;
+            font-size: 18px;
+            color: $mainDarkPurpleColor;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__infoCompany{
+    max-width: 690px;
+    display: inline-block;
+    float: left;
+    margin: 0 100px 0 0;
+    .footer__infoCompanyLine{
+      margin: 35px 0 0;
+      &:after{
+        display: inline-block;
+        content: '';
+        height: 100%;
+        vertical-align: middle;
+      }
+      .footer__logo{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: middle;
+        background: url("../img/icons/footerLogo.svg") no-repeat center;
+        background-size: contain;
+        margin-right: 10px;
+      }
+      .footer__copyrightText{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        font-family: poppinsMedium,sans-serif;
+        color: $mainDarkPurpleColor;
+      }
+      .footer__infoCompanyText{
+        font-size: 10px;
+      }
+    }
+  }
+  .footer__newsletterBlock{
+    width: 350px;
+    display: inline-block;
+    float: right;
+    .footer__newsletterHeading{
+      margin: 40px 0 0;
+      font-size: 14px;
+    }
+    .footer__newsletterFormWrapper{
+      margin: 35px 0;
+      width: 100%;
+      position: relative;
+      .footer__emailInput{
+        width: 100%;
+        height: 45px;
+        background: transparent;
+        border: 1px solid $lightGrayVioletColor;
+        border-radius: 20px;
+        padding: 0 0 0 23px;
+        font-family: poppinsLight, sans-serif;
+        font-size: 13px;
+        color: #878c96;
+        outline: none;
+      }
+      .footer__emailSend{
+        position: absolute;
+        right: 5px;
+        width: 100px;
+        border: none;
+        height: 38px;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: none;
+      }
+    }
+    .footer__privacyPolicyText{
+      font-size: 10px;
+      .footer__privacyPolicyLink{
+        cursor: pointer;
+        color: $mainMediumPurpleColor;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg){
+  .footer{
+    .footer__infoCompany {
+      max-width: 575px !important;
+      margin: 0 40px 0 0 !important;
+
+    }
+  }
+}
+@include media-breakpoint-down(md){
+  .footer{
+    .footer__newsletterBlock {
+      float: left !important;
+    }
+    .footer__infoCompany {
+      max-width: 575px !important;
+      margin: 0 40px 0 0 !important;
+
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .footer {
+    .footer__navBar {
+      height: 690px !important;
+      .footer__navBarColumn {
+        height: auto !important;
+        width: 50% !important;
+        .footer__navCategoryWrapper {
+          min-height: 145px !important;
+          margin: 0 0 30px !important;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xs){
+  .footer {
+    .footer__newsletterBlock {
+      width: 100% !important;
+    }
+    .footer__navBar {
+      height: 900px !important;
+      .footer__navBarColumn {
+        .footer__navCategoryWrapper {
+          .footer__navCategoryHeading {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}

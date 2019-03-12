@@ -1,0 +1,101 @@
+@import "../variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+.loginBlockWrapper{
+  min-height: 600px;
+  background: url("../img/loginBlockBg.png") no-repeat center, #472877;
+  .loginBlock{
+    height: 100%;
+    .loginBlock__infoBlock{
+      max-width: 440px;
+      height: 100%;
+      padding: 80px 0;
+      .loginBlock__topic{
+        color: white;
+      }
+      .loginBlock__heading{
+        color: white;
+        margin: 25px 0 0 0;
+      }
+      .loginBlock__text{
+        color: white;
+        margin: 35px 0 0 0;
+      }
+      .loginBlock__functionsBlock{
+        color: white;
+        margin: 45px 0 0 0;
+        display: inline-block;
+        .loginBlock__functionsColumn{
+          display: inline-block;
+          float: left;
+          .loginBlock__function{
+            text-align: left;
+            padding: 0 45px 0 0;
+            margin: 0 0 30px;
+            &:after{
+              content: '';
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+            }
+            .loginBlock__functionImg{
+              display: inline-block;
+              width: 28px;
+              height: 28px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              vertical-align: middle;
+              margin: 0 15px 0 0;
+            }
+            .loginBlock__functionTitle{
+              font-family: poppinsMedium, sans-serif;
+              vertical-align: middle;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .loginBlock__loginButton{
+        width: 185px;
+        height: 45px;
+        background: transparent;
+        border: 2px solid white;
+        margin: 30px 0 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(md){
+  .loginBlockWrapper{
+    background-image: none;
+    .loginBlock{
+      text-align: center !important;
+      .loginBlock__infoBlock{
+        display: inline-block !important;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .loginBlockWrapper{
+    .loginBlock {
+      .loginBlock__infoBlock{
+        .loginBlock__functionsBlock {
+          .loginBlock__functionsColumn{
+            .loginBlock__function{
+              padding: 0 10px 0 0 !important;
+              margin: 0 0 20px !important;
+              .loginBlock__functionImg {
+                width: 17px !important;
+                height: 17px !important;
+                margin: 0 5px 0 0 !important;
+              }
+              .loginBlock__functionTitle {
+                font-size: 13px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

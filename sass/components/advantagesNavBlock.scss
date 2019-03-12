@@ -1,0 +1,104 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../variables";
+
+.advantagesNavBlock{
+  margin: 40px 0 0 0;
+  display: none;
+  width: 100% ;
+}
+.advantagesNavBlock:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.advantagesNavBlock__circleNavWrapper{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 30px 35px 30px 30px;
+}
+
+.advantagesNavBlock__circleNavWrapper:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: url('../img/advantageBlockCircle.png') no-repeat center;
+  background-size: contain;
+  border: 2px dotted #9F86B2;
+}
+.advantagesNavBlock__tabContentsWrapper{
+  display: inline-block;
+  vertical-align: middle;
+  width: 320px;
+  .advantagesNavBlock__tabContent{
+    margin: 0 0 0 40px;
+  }
+}
+
+.advantagesNavBlock__circleNav {
+  position: relative;
+  width: 310px;
+  height: 310px;
+  padding: 0px;
+  border: dashed 2px #FFC800;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.advantagesNavBlock__circleNavItem {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  list-style-type: none;
+  font-size: 0;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  margin: -30px  !important;
+}
+.advantagesNavBlock__circleNavTabLink{
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+
+  &.active{
+    border: 2px solid #FFC800;
+  }
+
+}
+
+@include media-breakpoint-down(xs) {
+
+}
+@include media-breakpoint-down(sm) {
+  .advantagesNavBlock{
+    display: none !important;
+  }
+}
+@include media-breakpoint-down(md) {
+  .advantagesNavBlock{
+    display: inline-block;
+  }
+  .advantagesBlock__advantageTitle{
+    font-size: 25px;
+  }
+}
+@include media-breakpoint-down(lg) {
+}

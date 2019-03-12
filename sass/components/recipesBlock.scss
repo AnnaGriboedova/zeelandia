@@ -1,0 +1,425 @@
+@import "../variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.recipesBlockWrapper{
+  .recipesBlock{
+    padding: 120px 0 0 0;
+    text-align: center;
+    background-position-y: 63px;
+    &__heading.blockHeading{
+      margin: 20px 0 0 0;
+    }
+    &__subtitle.blockText{
+      margin: 30px 0 0 0;
+    }
+    &__tabsBlock{
+      padding: 55px 0 0 0;
+      position: relative;
+      font-size: 0;
+
+      .recipesBlock__tabsList {
+        display: inline-block;
+        list-style-type: none;
+        .slick-dots {
+          > li {
+            display: inline-block;
+          }
+          > li:only-child {
+            display: none;
+          }
+          li.slick-active button:before {
+            color: $mainDarkPurpleColor !important;
+          }
+          li button:before {
+            color: $mainDarkPurpleColor !important;
+          }
+        }
+        .recipesBlock__tabsListItem{
+          display: inline-block;
+          float: left;
+          height: 60px;
+          width: 310px;
+          border: 1px solid $lightGrayVioletColor;
+          border-left: none;
+          &:first-child{
+            border-left: 1px solid $lightGrayVioletColor;
+          }
+          .recipesBlock__tabLink {
+            color: $mainMediumGreyColor;
+            font-family: poppinsLight, sans-serif;
+            font-size: 14px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            text-align: center;
+            text-decoration-line: none;
+            &:before{
+              display: inline-block;
+              content: '';
+              width: 28px;
+              height: 19px;
+              background: url(../img/icons/recipesTabSprite.png);
+              background-size: auto 260%;
+              vertical-align: middle;
+              margin-right: 10px;
+              background-position-y: -27px;
+            }
+            &:after{
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+              content: "";
+            }
+            &:hover {
+              background-color: $lightGrayVioletColor;
+            }
+          }
+          .recipesBlock__tabConfectioneryRecipesLink{
+            &:before{
+              background-position-x: 0;
+            }
+          }
+          .recipesBlock__tabBakeryRecipesLink{
+            &:before{
+              background-position-x: -25px;
+            }
+          }
+          .recipesBlock__tabLinkActive {
+            box-sizing: content-box;
+            background-color: #fbf9fd;
+            &:before{
+              background-position-y: -3px;
+            }
+            &.recipesBlock__tabConfectioneryRecipesLink:hover, &.recipesBlock__tabBakeryRecipesLink:hover{
+              background-color: #fbf9fd;
+            }
+          }
+          .recipesBlock__tabConfectioneryRecipesLink.recipesBlock__tabLinkActive{
+            color: $mainDarkPurpleColor;
+            border-bottom: 2px solid $mainBrightPurpleColor;
+            &:before{
+              background-position-x: 0;
+            }
+          }
+          .recipesBlock__tabBakeryRecipesLink.recipesBlock__tabLinkActive{
+            color: $mainOrangeColor;
+            border-bottom: 2px solid $mainOrangeColor;
+            &:before{
+              background-position-x: -25px;
+            }
+          }
+        }
+      }
+      .recipesBlock__tabConfectioneryContent{
+        background: url("../img/recipesBlock/recipesBlockConfectioneryBg.png") center 80px,
+        linear-gradient(to bottom, transparent 160px, #FCF9FB 160px, #FCF9FB);
+      }
+      .recipesBlock__tabBakeryContent{
+        background: url("../img/recipesBlock/recipesBlockBakeryBg.png") center 80px,
+        linear-gradient(to bottom, transparent 160px, #FCF9FB 160px, #FCF9FB);
+      }
+      .recipesBlock__tabContent {
+        display: none;
+        margin: 60px 0 0 0;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        text-align: left;
+        width: 100%;
+        padding: 0 0 80px 0;
+        background-repeat: no-repeat;
+        .recipesBlock__categoryAllRecipesBlock{
+          width: 580px;
+          float: left;
+          margin: 0 20px 0 0;
+          background-color: #472876;
+          .recipesBlock__confectioneryAllRecipesImg{
+            background: url("../img/recipesBlock/confectioneryAllRecipes.png") no-repeat center;
+          }
+          .recipesBlock__bakeryAllRecipesImg{
+            background: url("../img/recipesBlock/bakeryAllRecipes.png") no-repeat center;
+          }
+          .recipesBlock__categoryAllRecipesImg{
+            width: 100%;
+            height: 370px;
+          }
+          .recipesBlock__categoryAllRecipesInfoBlock{
+            height: 390px;
+            width: 100%;
+            background: url("../img/recipesBlock/allRecipesInfoBg.png") center no-repeat;
+            padding: 45px 60px;
+            position: relative;
+            .recipesBlock__categoryAllRecipesQuantity, .recipesBlock__categoryAllRecipesHeading, .recipesBlock__categoryAllRecipesDescription{
+              color: white;
+            }
+            .recipesBlock__categoryAllRecipesHeading{
+              padding: 20px 0 0 0;
+            }
+            .recipesBlock__categoryAllRecipesDescription{
+              padding: 30px 0 0 0;
+            }
+          }
+          .recipesBlock__categoryAllRecipesButton{
+            background-color: transparent;
+            border: 2px solid white;
+            width: 150px;
+            height: 45px;
+            position: absolute;
+            bottom: 60px;
+          }
+        }
+        .recipesBlock__categoryDishesList{
+          height: 100%;
+          .recipesBlock__categoryDishBlock{
+            display: inline-block;
+            float: left;
+            width: 260px;
+            height: 370px;
+            position: relative;
+            margin: 0 20px 20px 0;
+            border: 1px solid $lightGrayVioletColor;
+            padding: 0 0 45px 0;
+            &:nth-child(2n){
+              margin-right: 0;
+            }
+            .recipesBlock__categoryDishImg{
+              width: 100%;
+              height: 160px;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+            .recipesBlock__categoryDishAuthor{
+              display: inline-block;
+              height: 40px;
+              width: 40px;
+              background-position: center;
+              background-repeat: no-repeat;
+              border-radius: 100%;
+              border: 2px solid white;
+              background-size: cover;
+              margin-top: -20px;
+              margin-left: 25px;
+            }
+            .recipesBlock__categoryDishInfo{
+              display: inline-block;
+              padding: 0 25px;
+              .recipesBlock__categoryDishHeading{
+                font-size: 18px;
+                font-weight: normal;
+                margin: 10px 0 0 0;
+              }
+              .recipesBlock__categoryDishDescription{
+                margin: 20px 0;
+              }
+            }
+            .recipesBlock__categoryDishPanelWrapper{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+            }
+            .recipesBlock__categoryDishPanel{
+              margin: 0 25px;
+              height: 45px;
+              border-top: 1px solid #E1DCE7;
+              .recipesBlock__categoryDishSectionInfo{
+                float: left;
+                height: 100%;
+                &:after{
+                  content: "";
+                  display: inline-block;
+                  vertical-align: middle;
+                  height: 100%;
+                }
+                .recipesBlock__categoryDishSectionImg{
+                  display: inline-block;
+                  width: 17px;
+                  height: 17px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: 100% auto;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                }
+                .recipesBlock__categoryDishSectionText{
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+              }
+
+              .recipesBlock__categoryDishIndicator{
+                @extend .recipesBlock__categoryDishSectionInfo;
+                float: right;
+                .recipesBlock__categoryDishIndicatorImg{
+                  @extend .recipesBlock__categoryDishSectionImg;
+                }
+                .recipesBlock__categoryDishIndicatorText{
+                  @extend .recipesBlock__categoryDishSectionText;
+                }
+              }
+            }
+          }
+        }
+      }
+      .recipesBlock__lookRecipesButton{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        display: none;
+      }
+    }
+
+    @-webkit-keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .recipesBlock__categoryAllRecipesBlock {
+    width: 50% !important;
+    position: relative !important;
+    margin: 0 0 40px 0 !important;
+    .recipesBlock__categoryAllRecipesImg {
+      margin: 0 0 2.5% 0;
+    }
+    .recipesBlock__categoryAllRecipesInfoBlock {
+      height: 370px !important;
+      background-image: url(../img/recipesBlock/allRecipesInfoBg.png) !important;
+      background-position: right !important;
+      background-repeat: no-repeat !important;
+      padding: 2.5% 5% 5% 5% !important;
+      position: static !important;
+      background-color: #472876 !important;
+      .recipesBlock__categoryAllRecipesButton {
+        bottom: 0 !important;
+        margin: 0 0 5% 0 !important;
+      }
+    }
+  }
+  .recipesBlock__categoryDishesList {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    .recipesBlock__categoryDishBlock {
+      width: 47.5% !important;
+      margin: 0 0 2.5% 2.5% !important;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+   .recipesBlock__categoryAllRecipesBlock {
+     width: 100% !important;
+     .recipesBlock__categoryAllRecipesImg {
+       float: left !important;
+       width: 40% !important;
+       margin: 0 !important;
+     }
+     .recipesBlock__categoryAllRecipesInfoBlock {
+       float: left !important;
+       width: 60% !important;
+       padding: 2.5% 2.5% 80px 2.5% !important;
+       .recipesBlock__categoryAllRecipesHeading {
+         font-size: 26px !important;
+       }
+       .recipesBlock__categoryAllRecipesButton {
+         margin: 0 0 2.5% 0 !important;
+       }
+     }
+   }
+   .recipesBlock__categoryDishesList {
+     width: 100% !important;
+     .recipesBlock__categoryDishBlock {
+       width: 100% !important;
+       margin: 0 0 10px 0 !important;
+       height: auto !important;
+       padding: 0 !important;
+       .recipesBlock__categoryDishImg{
+         width: 27% !important;
+         float: left !important;
+       }
+       .recipesBlock__categoryDishAuthor{
+         vertical-align: top !important;
+         margin-top: 0 !important;
+         top: 20px !important;
+         position: relative !important;
+         margin-left: -20px !important;
+       }
+       .recipesBlock__categoryDishInfo{
+         width: 73% !important;
+         padding: 0 25px !important;
+         position: absolute !important;
+         right: 0 !important;
+       }
+       .recipesBlock__categoryDishPanelWrapper{
+         width: 73% !important;
+         right: 0 !important;
+       }
+
+     }
+   }
+  .recipesBlock__lookRecipesButton{
+    display: inline-block !important;
+  }
+ }
+@include media-breakpoint-down(xs) {
+  .recipesBlock__categoryAllRecipesBlock {
+    .recipesBlock__categoryAllRecipesInfoBlock {
+      padding: 3.5% 3.5% 80px 3.5% !important;
+
+      .recipesBlock__categoryAllRecipesButton {
+        margin: 0 0 3.5% 0 !important;
+      }
+    }
+  }
+  .recipesBlock__categoryDishesList {
+    .recipesBlock__categoryDishBlock {
+      .recipesBlock__categoryDishInfo{
+        .recipesBlock__categoryDishHeading {
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .recipesBlock__categoryAllRecipesBlock {
+    .recipesBlock__categoryAllRecipesImg {
+      display: none !important;
+    }
+    .recipesBlock__categoryAllRecipesInfoBlock {
+      width: 100% !important;
+      height: auto !important;
+      .recipesBlock__categoryAllRecipesDescription {
+        padding: 20px 0 0 0 !important;
+      }
+    }
+  }
+  .recipesBlock__categoryDishesList {
+    .recipesBlock__categoryDishBlock {
+      .recipesBlock__categoryDishInfo{
+        .recipesBlock__categoryDishHeading {
+          font-size: 14px !important;
+        }
+        .recipesBlock__categoryDishDescription {
+          margin: 5px 0 !important;
+          font-size: 13px !important;
+        }
+      }
+      .recipesBlock__categoryDishPanelWrapper{
+        .recipesBlock__categoryDishPanel {
+          height: 30px !important;
+          .recipesBlock__categoryDishSectionInfo .recipesBlock__categoryDishSectionText,  .recipesBlock__categoryDishIndicator .recipesBlock__categoryDishIndicatorText {
+            font-size: 9px !important;
+          }
+        }
+      }
+    }
+  }
+}
